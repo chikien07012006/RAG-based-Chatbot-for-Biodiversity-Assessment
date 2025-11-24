@@ -1,0 +1,78 @@
+# Core Framework for RAG System
+langchain
+langchain-community
+
+# Google Gemini
+google-generativeai
+
+# Embedding model
+
+# Loader
+
+# Rerank
+
+# Vector Database Service
+
+# Backend & Production 
+fastapi
+
+
+
+
+# # Core framework
+# langchain==0.3.7
+# langchain-community==0.3.7
+# langchain-core==0.3.7
+# langchain-text-splitters==0.3.4
+# langgraph==0.2.9
+
+# # Google Gemini
+# google-generativeai==0.7.2
+# langchain-google-genai==2.0.4
+
+# # Embedding (HuggingFace)
+# sentence-transformers==3.2.0
+# torch==2.4.1
+# transformers==4.45.2
+
+# # Embedding models mạnh + nhẹ (chọn 1 trong 3)
+# # 1. Nhẹ nhất + ngon nhất hiện tại (khuyên dùng)
+# GritLM==0.1.1                     # GritLM-7B-instruct (top 1 MTEB tháng 11/2025)
+# # 2. Multilingual cực mạnh
+# BAAI/bge-m3
+# # 3. Nếu muốn siêu nhẹ (~33M)
+# intfloat/multilingual-e5-small
+
+# # Loader siêu mạnh (PDF bảng đẹp)
+# unstructured[all-docs]==0.16.3
+# unstructured-inference==0.7.36
+# pytesseract==0.3.13
+# poppler-utils==0.1.0            # cần cài hệ thống nếu dùng hi_res
+
+# # Vector DB
+# qdrant-client==1.12.1
+# fastembed==0.3.6                # backup nếu muốn embed không cần torch
+
+# # Reranker siêu nhanh (khuyên dùng)
+# flashrank==0.2.9                # <1ms, không tốn tiền
+
+# # Context compression (tiết kiệm 70% token Gemini)
+# llmlingua==0.3.0
+# longllmlingua==0.2.0
+
+# # Utils
+# pydantic==2.9.2
+# pydantic-settings==2.5.2
+# python-dotenv==1.0.1
+# rich==13.9.2
+# typer[all]==0.12.5
+
+# # Optional nhưng rất nên có
+# ragas==0.1.20
+# arize-phoenix==5.5.0
+# openinference-instrumentation-langchain==0.1.8
+
+# # FastAPI production
+# fastapi==0.115.4
+# uvicorn[standard]==0.32.0
+# sse-starlette==2.1.3
