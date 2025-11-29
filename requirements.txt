@@ -17,6 +17,9 @@ google-generativeai
 fastapi
 
 
+tqdm
+
+
 
 
 # # Core framework
