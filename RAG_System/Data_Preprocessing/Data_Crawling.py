@@ -107,15 +107,42 @@ def download_and_save_with_metadata(url, subfolder="others_types"):
 
 URLS = [
     # PDF khoa học & báo cáo
-    "",
-    
+    "https://iucn.org/sites/default/files/2022-05/hon_mun_mid_term_eval_final.pdf",
+    "https://archive.iwlearn.org/unepscs.org/www.unepscs.org/Economic_Valuation_Training_Materials/06%20Readings%20on%20Economic%20Valuation%20of%20Coastal%20Habitats/20-Recreation-Value-Coral-Reefs-Hon-Mun-Island-Vietnam.pdf",
+    "https://e-services.nafosted.gov.vn/upload/pub_certificates/pub_31218_92862.pdf",
+    "https://iucn.org/sites/default/files/import/downloads/iucn_coral_reef_portfolio.pdf",
+    "https://gcrmn.net/wp-content/uploads/2023/01/Status-of-Coral-Reefs-of-the-World-2020-Full-Report.pdf",
+    "https://www.coraltriangleinitiative.org/sites/default/files/resources/regional-state-coral-triangle_0.pdf",
+    "https://gefcoral.org/Portals/53/downloads/disease_products/0807%20Coral%20disease%20handbook%20sample.pdf",
+    "https://www.biosphere-expeditions.org/images/stories/pdfs/reefcheck/InstructionManual16.pdf"
+    "http://mrc.gov.mv/assets/Uploads/1-MCBRP-2017New.pdf",
+    "https://www.coraltriangleinitiative.org/sites/default/files/resources/LEAP_Final_complete.pdf",
+    "https://reefresilience.org/pdf/coral_reef_resilience_gg-rs.pdf",
 
     # HTML news web
     "https://nhandan.vn/hoi-sinh-ran-san-ho-hon-mun-post860078.html",
     "https://vnexpress.net/du-khach-phat-hien-ca-chet-hang-loat-san-ho-gay-rap-duoi-bien-khanh-hoa-4929958.html",
-    "https://vnexpress.net/gan-200-ha-san-ho-bien-mat-o-vinh-nha-trang-4911314.html"  
-
-    # docsx, policies, ...
+    "https://vnexpress.net/gan-200-ha-san-ho-bien-mat-o-vinh-nha-trang-4911314.html",
+    "https://vasi.mae.gov.vn/cuoc-thi-cung-giu-mau-xanh-cua-bien/bao-ton-he-sinh-thai-san-ho--bai-1-vai-tro-cua-he-sinh-thai-san-ho-906.htm",
+    "https://vasi.mae.gov.vn/tin-tuc--su-kien/bao-ve-da-dang-sinh-hoc-nhan-len-su-song-trong-long-bien-1883.htm",
+    "https://nhandan.vn/bao-ton-phat-trien-he-sinh-thai-vung-bien-dao-truong-sa-post218227.html",
+    "https://nongnghiepmoitruong.vn/bao-ton-he-sinh-thai-san-ho--rung-mua-nhiet-doi-duoi-bien-d339279.html",
+    "https://vasi.mae.gov.vn/cuoc-thi-cung-giu-mau-xanh-cua-bien/bao-ton-he-sinh-thai-ran-san-ho--bai-2-ran-san-ho-keu-cuu-905.htm",
+    "https://baokhanhhoa.vn/xa-hoi/202509/chaomungdai-hoi-dai-bieu-dang-bo-tinh-khanh-hoa-lan-thu-i-nhiem-ky-2025-2030-bao-ton-phat-huy-gia-tri-ben-vung-he-sinh-thai-bienvinh-nha-trang-e4914ab/",
+    "https://baokhanhhoa.vn/du-lich/201706/bao-ve-ran-san-ho-o-hon-mun-truoc-tien-la-y-thuc-cua-huong-dan-vien-8045182/",
+    "https://tapchimoitruong.vn/chuyen-muc-3/kinh-nghiem-bao-ve-moi-truong-di-san-thien-nhien-tai-ran-san-ho-great-barrier-cua-oxtraylia-va-bai-hoc-cho-viet-nam-30294",
+    "https://nhandan.vn/ran-san-ho-trang-khong-lo-post914877.html",
+    "https://nhandan.vn/cong-dong-dia-phuong-tham-gia-phuc-hoi-ran-san-ho-post911657.html",
+    "https://nhandan.vn/hon-80-ran-san-ho-toan-cau-bi-anh-huong-sau-dot-tay-trang-lon-nhat-lich-su-post874704.html",
+    "https://en.nhandan.vn/reviving-hon-muns-coral-reefs-post144454.html",
+    "https://www.coris.noaa.gov/activities/reef_managers_guide/",
+    "https://www.mdpi.com/1424-2818/17/6/434",
+    "https://www.unep.org/resources/report/coral-bleaching-futures",
+    "https://www.mdpi.com/2079-9292/13/24/5027",
+    "https://arxiv.org/pdf/2405.14879",
+    "https://www.mdpi.com/2072-4292/12/3/489",
+    "https://www.digilab.ai/news/digilab-developing-world-first-ai-for-planet%E2%80%99s-largest-coral-reef-restoration-programme"
+    
     
     
 ]
