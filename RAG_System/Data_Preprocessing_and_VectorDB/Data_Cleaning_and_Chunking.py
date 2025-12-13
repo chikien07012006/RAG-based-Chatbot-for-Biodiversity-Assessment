@@ -36,10 +36,13 @@ def load_all_documents(data_folder):
         
     return docs
 
-py_vncorenlp.download_model(save_dir='D:\RAG for Biodiversity Assessment')
+# py_vncorenlp.download_model(save_dir='D:\RAG for Biodiversity Assessment')
 vncorenlp = py_vncorenlp.VnCoreNLP(
     save_dir = "D:\RAG_for_Biodiversity_Assessment\VnCoreNLP_Model",
-    annotators=["wseg", "pos", "ner"], 
+    annotators=["wseg",
+                #"pos", 
+                #"ner"
+                ], 
 )
 
 def is_vietnamese(text):
@@ -148,9 +151,9 @@ def full_pipeline_Cleaning_and_Chunking(data_folder):
     cleaned_docs = []
     for doc in raw_data:
         cleaned_doc = clean_text(doc.page_content)
-        cleaned_docs.append(cleaned_doc)
+        doc.page_content = cleaned_doc
+        cleaned_docs.append(doc)
     
-    # Chunking
     final_docs = Chunker.split_documents(cleaned_docs)
     
     return final_docs
