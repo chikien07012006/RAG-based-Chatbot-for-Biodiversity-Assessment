@@ -4,7 +4,7 @@ from langchain_qdrant import QdrantVectorStore
 from qdrant_client.http.models import Distance, VectorParams, PointStruct
 from tqdm.auto import tqdm
 import pandas as pd
-import uuid
+from  uuid import  uuid4
 import os
 from dotenv import load_dotenv
 from Data_Cleaning_and_Chunking import full_pipeline_Cleaning_and_Chunking
@@ -12,7 +12,7 @@ from Data_Cleaning_and_Chunking import full_pipeline_Cleaning_and_Chunking
 load_dotenv()
 
 model = HuggingFaceEmbeddings(
-    model_name="nomic-ai/nomic-embed-text-v1.5", 
+    model_name=os.getenv("EMBEDDING_MODEL"), 
     model_kwargs={"trust_remote_code": True})
 
 # qdrant_client = QdrantClient(
@@ -29,12 +29,13 @@ vector_store = QdrantVectorStore.from_existing_collection(
     url = os.getenv("QDRANT_URL"),
     api_key = os.getenv("QDRANT_API_KEY"),
     collection_name = os.getenv("QDRANT_COLLECTION"),
-    embedding = model 
+    embedding = model,
+    timeout=300
 )
-
 chunked_documents = full_pipeline_Cleaning_and_Chunking("D:\RAG_for_Biodiversity_Assessment\DATA\Raw")
-print(len(chunked_documents))
-# for i in range(10):
-#     print(chunked_documents[i])
-#     print(chunked_documents[i].get("page_content"))
-#     print()
+
+uuids = [str(uuid4()) for _ in range(len(chunked_documents))]
+
+vector_store.add_documents(documents = chunked_documents, ids=uuids, batch_size=64)
+
+print("done")
