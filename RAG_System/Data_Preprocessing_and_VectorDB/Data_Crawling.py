@@ -106,7 +106,7 @@ def download_and_save_with_metadata(url, subfolder="others_types"):
 
 
 URLS = [
-    # PDF khoa học & báo cáo
+    # PDF 
     "https://iucn.org/sites/default/files/2022-05/hon_mun_mid_term_eval_final.pdf",
     "https://archive.iwlearn.org/unepscs.org/www.unepscs.org/Economic_Valuation_Training_Materials/06%20Readings%20on%20Economic%20Valuation%20of%20Coastal%20Habitats/20-Recreation-Value-Coral-Reefs-Hon-Mun-Island-Vietnam.pdf",
     "https://e-services.nafosted.gov.vn/upload/pub_certificates/pub_31218_92862.pdf",
@@ -119,7 +119,7 @@ URLS = [
     "https://www.coraltriangleinitiative.org/sites/default/files/resources/LEAP_Final_complete.pdf",
     "https://reefresilience.org/pdf/coral_reef_resilience_gg-rs.pdf",
 
-    # HTML news web
+    # HTML 
     "https://nhandan.vn/hoi-sinh-ran-san-ho-hon-mun-post860078.html",
     "https://vnexpress.net/du-khach-phat-hien-ca-chet-hang-loat-san-ho-gay-rap-duoi-bien-khanh-hoa-4929958.html",
     "https://vnexpress.net/gan-200-ha-san-ho-bien-mat-o-vinh-nha-trang-4911314.html",

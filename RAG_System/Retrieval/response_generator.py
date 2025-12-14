@@ -40,7 +40,7 @@ class ResponseGenerator:
             self.llm = ChatHuggingFace(llm=self.endpoint_llm, verbose=False)
 
             self.chain = (
-                {"context": self.retriever, "question": RunnablePassthrough(), "chat_history": RunnableLambda(lambda x: x.get("chat_history", []))}
+                {"context": self.retriever, "question": RunnablePassthrough()}
                 | self.prompt
                 | self.llm
                 | StrOutputParser()
@@ -54,7 +54,6 @@ class ResponseGenerator:
 
         response = self.chain.invoke({
             "question": question,
-            "chat_history": chat_history
         })
 
         return response

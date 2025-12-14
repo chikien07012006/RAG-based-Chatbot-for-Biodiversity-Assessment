@@ -49,31 +49,3 @@ class Retriever:
         
         return "\n".join(contents)
     
-
-
-# # # startup.py hoặc main.py
-# from fastapi import FastAPI
-
-# app = FastAPI()
-
-# @app.on_event("startup")
-# async def startup_event():
-#     load_dotenv()
-#     app.state.embedding_model = HuggingFaceEmbeddings(
-#         model_name="nomic-ai/nomic-embed-text-v1.5",
-#         model_kwargs={"trust_remote_code": True}
-#     )
-#     app.state.vector_store = QdrantVectorStore.from_existing_collection(
-#         url=os.getenv("QDRANT_URL"),
-#         api_key=os.getenv("QDRANT_API_KEY"),
-#         collection_name=os.getenv("QDRANT_COLLECTION"),
-#         embedding=app.state.embedding_model
-#     )
-
-# @app.post("/retrieve")
-# async def retrieve(question: str):
-#     question_embedding = app.state.embedding_model.embed_query(question)
-#     results = app.state.vector_store.similarity_search_by_vector(
-#         question_embedding, k=20, fetch_k=60
-#     )
-#     return results
