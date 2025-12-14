@@ -1,0 +1,29 @@
+langchain
+langchain-community
+langchain-core
+langchain-text-splitters
+
+# HuggingFace + LLM
+langchain-huggingface
+huggingface-hub
+transformers
+torch
+sentence-transformers
+
+# Vector DB
+qdrant-client
+langchain-qdrant
+
+# Document processing
+unstructured
+pypdf
+beautifulsoup4
+lxml
+
+# Vietnamese / multilingual
+py_vncorenlp
+langdetect
+
+# Utilities
+python-dotenv
+tqdm
