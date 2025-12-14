@@ -49,8 +49,6 @@ class Retriever:
         
         return "\n".join(contents)
     
-Retriever1 = Retriever()
-print(Retriever1.get_content("San hô là động vật hay thực vật? Chúng sống bằng cách nào?"))
 
 
 # # # startup.py hoặc main.py
