@@ -31,5 +31,5 @@ py_vncorenlp
 langdetect
 
 # Utilities
-python-dotenv
+dotenv
 tqdm
