@@ -51,8 +51,8 @@ def ready_check():
         raise HTTPException(status_code=503, detail="Đang khởi tạo hệ thống (warm-up model và dữ liệu)...")
 
 @app.get("/")
-def health_check():
-    return {"status": "healthy", "message": "RAG Chatbot API is running"}
+def root():
+    return {"status": "ok"}
 
 @app.post("/chat")
 def chat(request: ChatRequest, generator: ResponseGenerator = Depends(get_generator)):
