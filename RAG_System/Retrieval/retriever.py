@@ -14,7 +14,7 @@ class Retriever:
     def __new__(cls):
         if cls._instance is None:
             cls._instance = super(Retriever, cls).__new__(cls)
-        return cls._instance
+        return cls._instance    
     
     def __init__(self):
         if not self._initialized:
@@ -34,6 +34,9 @@ class Retriever:
             self._initialized = True
     
     def retrieve(self, question, k = 20):
+        if not self._initialized:
+            self._init()
+        
         question_embedding = self.embedding_model.embed_query(question)
     
         result = self.vector_store.similarity_search_by_vector(
