@@ -4,6 +4,30 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+fastapi = "*"
+uvicorn = "*"
+pydantic = "*"
+langchain = "*"
+langchain-community = "*"
+langchain-core = "*"
+langchain-text-splitters = "*"
+langchain-huggingface = "*"
+huggingface-hub = "*"
+transformers = "*"
+torch = "*"
+sentence-transformers = "*"
+qdrant-client = "*"
+langchain-qdrant = "*"
+unstructured = "*"
+pypdf = "*"
+beautifulsoup4 = "*"
+lxml = "*"
+py_vncorenlp = "*"
+langdetect = "*"
+python-dotenv = "*"
+tqdm = "*"
+streamlit = "*"
+requests = "*"
 
 [dev-packages]
 
