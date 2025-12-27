@@ -9,7 +9,9 @@ import os
 from dotenv import load_dotenv
 from Data_Cleaning_and_Chunking import full_pipeline_Cleaning_and_Chunking
 
-load_dotenv()
+# Load environment variables from .env file
+dotenv_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), '.env')
+load_dotenv(dotenv_path=dotenv_path)
 
 model = HuggingFaceEmbeddings(
     model_name=os.getenv("EMBEDDING_MODEL"), 
@@ -32,7 +34,7 @@ vector_store = QdrantVectorStore.from_existing_collection(
     embedding = model,
     timeout=300
 )
-chunked_documents = full_pipeline_Cleaning_and_Chunking("D:\RAG_for_Biodiversity_Assessment\DATA\Raw")
+chunked_documents = full_pipeline_Cleaning_and_Chunking(r"D:\RAG_for_Biodiversity_Assessment\DATA\Raw")
 
 uuids = [str(uuid4()) for _ in range(len(chunked_documents))]
 

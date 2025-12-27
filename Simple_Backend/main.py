@@ -8,6 +8,7 @@ if str(parent_dir) not in sys.path:
     sys.path.insert(0, str(parent_dir))
 
 from fastapi import FastAPI, Depends, HTTPException
+from contextlib import asynccontextmanager
 from pydantic import BaseModel
 from RAG_System import ResponseGenerator
 import logging
@@ -18,7 +19,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-app = FastAPI()
+logger = logging.getLogger(__name__)
+
 
 class ChatRequest(BaseModel):
     question: str
@@ -41,6 +43,23 @@ def get_generator():
                 detail=f"Không thể khởi tạo ResponseGenerator: {str(e)}"
             )
     return _generator
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Lifespan context manager to handle startup and shutdown events"""
+    logger.info("Đang khởi động ứng dụng và load models (Embedding + LLM)...")
+    try:
+        # Force initialization of the generator
+        generator = get_generator()
+        generator.initialize()
+        logger.info("Models đã được load thành công! Ứng dụng sẵn sàng xử lý request.")
+    except Exception as e:
+        logger.error(f"Lỗi nghiêm trọng khi load models: {e}")
+        # Optional: raise e to prevent app from starting if models fail
+    yield
+    logger.info("Ứng dụng đang tắt...")
+
+app = FastAPI(lifespan=lifespan)
 
 @app.get("/")
 def root():

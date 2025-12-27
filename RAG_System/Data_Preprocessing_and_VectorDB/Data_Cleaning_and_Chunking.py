@@ -38,7 +38,7 @@ def load_all_documents(data_folder):
 
 # py_vncorenlp.download_model(save_dir='D:\RAG for Biodiversity Assessment')
 vncorenlp = py_vncorenlp.VnCoreNLP(
-    save_dir = "D:\RAG_for_Biodiversity_Assessment\VnCoreNLP_Model",
+    save_dir = r"D:\RAG_for_Biodiversity_Assessment\VnCoreNLP_Model",
     annotators=["wseg",
                 #"pos", 
                 #"ner"

@@ -28,6 +28,7 @@ python-dotenv = "*"
 tqdm = "*"
 streamlit = "*"
 requests = "*"
+einops = "*"
 
 [dev-packages]
 

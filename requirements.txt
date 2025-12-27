@@ -30,3 +30,4 @@ langdetect
 # Utilities
 python-dotenv
 tqdm
+einops

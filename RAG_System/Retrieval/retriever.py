@@ -4,7 +4,9 @@ from dotenv import load_dotenv
 import os
 import logging
 
-load_dotenv()
+# Load environment variables from .env file
+dotenv_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), '.env')
+load_dotenv(dotenv_path=dotenv_path)
 logger = logging.getLogger(__name__)
 
 class Retriever:
