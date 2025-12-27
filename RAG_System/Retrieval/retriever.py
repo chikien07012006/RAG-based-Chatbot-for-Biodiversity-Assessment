@@ -1,7 +1,5 @@
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_qdrant import QdrantVectorStore
-from langchain_community.cross_encoders import HuggingFaceCrossEncoder
-from langchain.retrievers.document_compressors import CrossEncoderReranker
 from dotenv import load_dotenv
 import os
 
@@ -17,7 +15,7 @@ class Retriever:
         return cls._instance    
     
     def __init__(self):
-        if not self._initialized:
+        if not Retriever._initialized:
             
             self.embedding_model = HuggingFaceEmbeddings(
             model_name=os.getenv("EMBEDDING_MODEL"), 
@@ -31,11 +29,11 @@ class Retriever:
             embedding = self.embedding_model
             )
             
-            self._initialized = True
+            Retriever._initialized = True
     
     def retrieve(self, question, k = 20):
-        if not self._initialized:
-            self._init()
+        if not Retriever._initialized:
+            self.__init__()
         
         question_embedding = self.embedding_model.embed_query(question)
     

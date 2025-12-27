@@ -5,7 +5,3 @@ __all__ = [
 ]
 
 __version__ = "0.1.0"
-
-generator = ResponseGenerator()
-response1 = generator.generate_response("Tình trạng rạn san hô ở Hòn Mun?")
-print(response1)
